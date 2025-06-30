@@ -19,13 +19,21 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd my-react-app
+          npm install
 
       - name: Run lint
-        run: npm run lint
+        run: |
+          cd my-react-app
+          npm run lint
 
       - name: Run tests
-        run: npm test
+        run: |
+          cd my-react-app
+          npm test
 
       - name: Build project
-        run: npm run build
+        run: |
+          cd my-react-app
+          npm run build
